@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "362328330979",
+    "firebase_url": "https://choroibazarwithmvvm-default-rtdb.firebaseio.com",
+    "project_id": "choroibazarwithmvvm",
+    "storage_bucket": "choroibazarwithmvvm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362328330979:android:ea9018f49d0de23939ebd6",
+        "android_client_info": {
+          "package_name": "com.project.choroibazarwithmvvm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJlNqWAoGbaQafeYx0hLmBHUEBrq1K1wY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362328330979:android:7b7c38621fb23c7b39ebd6",
+        "android_client_info": {
+          "package_name": "com.project.ecommercemvvmcz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJlNqWAoGbaQafeYx0hLmBHUEBrq1K1wY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

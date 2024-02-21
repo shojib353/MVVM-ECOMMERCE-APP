@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/cartFragment2"
+        android:name="com.project.ecommercemvvmcz.ui.Cart.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment2_to_profileFragment24"
+            app:destination="@id/profileFragment2"
+            app:popUpTo="@id/cartFragment2"
+            app:popUpToInclusive="true"
+            app:restoreState="true"
+            app:popUpToSaveState="true"/>
+
+
+        <action
+            android:id="@+id/action_cartFragment2_to_billing"
+            app:destination="@id/billing" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.project.ecommercemvvmcz.ui.Home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_cartFragment22"
+            app:destination="@id/cartFragment2"
+            app:popUpTo="@id/homeFragment2"
+            app:popUpToInclusive="true"
+            app:restoreState="true"
+            app:popUpToSaveState="true"/>
+        <action
+            android:id="@+id/action_homeFragment2_to_search"
+            app:destination="@id/search" />
+        <action
+            android:id="@+id/action_homeFragment2_to_productDetails2"
+            app:destination="@id/productDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.project.ecommercemvvmcz.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_homeFragment23"
+            app:destination="@id/homeFragment2"
+            app:popUpTo="@id/profileFragment2"
+            app:popUpToInclusive="true"
+            app:restoreState="true"
+            app:popUpToSaveState="true"/>
+        <action
+            android:id="@+id/action_profileFragment2_to_address"
+            app:destination="@id/address" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.project.ecommercemvvmcz.ui.Search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/productDetails"
+        android:name="com.project.ecommercemvvmcz.ui.ProductDetails"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" >
+
+        <argument
+            android:name="product"
+            app:argType="com.project.ecommercemvvmcz.ui.Home.Model.Products"/>
+        <action
+            android:id="@+id/action_productDetails_to_cartFragment2"
+            app:destination="@id/cartFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/address"
+        android:name="com.project.ecommercemvvmcz.ui.Home.Address.Address"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" />
+
+    <fragment
+        android:id="@+id/billing"
+        android:name="com.project.ecommercemvvmcz.ui.Billing.Billing"
+        android:label="Billing"
+        tools:layout="@layout/fragment_billing">
+        <action
+            android:id="@+id/action_billing_to_address"
+            app:destination="@id/address" />
+        <argument
+            android:name="totalPrice"
+            app:argType="integer" />
+        <argument
+            android:name="Cproducts"
+            app:argType="com.project.ecommercemvvmcz.ui.Home.Model.CartProduct[]" />
+    </fragment>
+
+
+</navigation>

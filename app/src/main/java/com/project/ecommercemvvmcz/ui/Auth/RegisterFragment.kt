@@ -1,11 +1,13 @@
 package com.project.ecommercemvvmcz.ui.Auth
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.project.ecommercemvvmcz.MainActivity
 import com.project.ecommercemvvmcz.data.model.User
 import com.project.ecommercemvvmcz.databinding.FragmentRegisterBinding
 import com.project.ecommercemvvmcz.util.UiState
@@ -62,7 +64,11 @@ class RegisterFragment : Fragment() {
                     binding.registerBtn.setText("Register")
                     binding.registerProgress.hide()
                     toast(state.data)
-                    //mainActivity.restart()
+                    Intent(requireActivity(), MainActivity::class.java).also { intent ->
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        startActivity(intent)
+                        requireActivity().finish()
+                    }
 
                 }
             }
@@ -72,8 +78,8 @@ class RegisterFragment : Fragment() {
     fun getUserObj(): User {
         return User(
             id = "",
-            first_name = binding.firstNameEt.text.toString(),
-            last_name = binding.lastNameEt.text.toString(),
+            firstName = binding.firstNameEt.text.toString(),
+            lastName = binding.lastNameEt.text.toString(),
             phone = binding.jobTitleEt.text.toString(),
             email = binding.emailEt.text.toString(),
         )

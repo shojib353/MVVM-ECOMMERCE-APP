@@ -6,6 +6,7 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.firestore
+import com.google.firebase.storage.FirebaseStorage
 import com.google.gson.Gson
 import com.project.ecommercemvvmcz.ui.Home.Model.FirebaseCommon
 import com.project.ecommercemvvmcz.util.SharedPrefConstants
@@ -40,6 +41,9 @@ object AppModule {
     @Singleton
     fun provideFirebaseCommon(firbaseAuth: FirebaseAuth,
                               firestore:FirebaseFirestore)=FirebaseCommon(firestore,firbaseAuth)
+
+
+
     /*@Provides
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context) :Db

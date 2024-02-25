@@ -67,8 +67,13 @@ class MainActivity : AppCompatActivity() {
                     binding.toolbar.visibility=View.GONE
                     binding.bottomNav.visibility=View.VISIBLE
                 }
-                R.id.search,R.id.productDetails->{binding.bottomNav.visibility=View.GONE
+                R.id.search,R.id.productDetails,R.id.forgotPasswordFragment2->{binding.bottomNav.visibility=View.GONE
                                 binding.toolbar.visibility=View.GONE}
+                R.id.billing,R.id.orderDetailFragment,R.id.allOrdersFragment->
+                    {binding.bottomNav.visibility=View.GONE
+                    binding.toolbar.visibility=View.VISIBLE
+
+                }
 
 
                 else ->{ binding.bottomNav.visibility=View.VISIBLE

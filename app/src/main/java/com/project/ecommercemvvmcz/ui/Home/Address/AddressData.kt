@@ -15,3 +15,12 @@ data class AddressData(
 {
     constructor():this("","","","","","")
 }
+
+@Parcelize
+data class AddressDatas(
+    val fullAddress:String,
+    val phone:String
+):Parcelable
+{
+    constructor():this("","")
+}

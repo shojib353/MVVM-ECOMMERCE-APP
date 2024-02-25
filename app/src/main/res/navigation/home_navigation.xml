@@ -46,7 +46,7 @@
     <fragment
         android:id="@+id/profileFragment2"
         android:name="com.project.ecommercemvvmcz.ui.ProfileFragment"
-        android:label="Profile"
+        android:label="Account"
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profileFragment2_to_homeFragment23"
@@ -58,6 +58,12 @@
         <action
             android:id="@+id/action_profileFragment2_to_address"
             app:destination="@id/address" />
+        <action
+            android:id="@+id/action_profileFragment2_to_userAccountFragment"
+            app:destination="@id/userAccountFragment" />
+        <action
+            android:id="@+id/action_profileFragment2_to_allOrdersFragment"
+            app:destination="@id/allOrdersFragment" />
     </fragment>
     <fragment
         android:id="@+id/search"
@@ -81,7 +87,7 @@
     <fragment
         android:id="@+id/address"
         android:name="com.project.ecommercemvvmcz.ui.Home.Address.Address"
-        android:label="fragment_address"
+        android:label="Address"
         tools:layout="@layout/fragment_address" />
 
     <fragment
@@ -98,6 +104,38 @@
         <argument
             android:name="Cproducts"
             app:argType="com.project.ecommercemvvmcz.ui.Home.Model.CartProduct[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="com.project.ecommercemvvmcz.ui.userAccount.UserAccountFragment"
+        android:label="Account Setting"
+        tools:layout="@layout/fragment_user_account" >
+        <action
+            android:id="@+id/action_userAccountFragment_to_forgotPasswordFragment2"
+            app:destination="@id/forgotPasswordFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment2"
+        android:name="com.project.ecommercemvvmcz.ui.Auth.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/allOrdersFragment"
+        android:name="com.project.ecommercemvvmcz.ui.order.AllOrdersFragment"
+        android:label="All Orders"
+        tools:layout="@layout/fragment_all_orders" >
+        <action
+            android:id="@+id/action_allOrdersFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.project.ecommercemvvmcz.ui.order.OrderDetailFragment"
+        android:label="Order Details"
+        tools:layout="@layout/fragment_order_detail">
+        <argument
+            android:name="order"
+            app:argType="com.project.ecommercemvvmcz.ui.order.Order" />
     </fragment>
 
 

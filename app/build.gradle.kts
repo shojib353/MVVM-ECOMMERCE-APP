@@ -27,6 +27,7 @@ android {
     buildFeatures {
         viewBinding =true
         dataBinding =true
+
     }
 
 
@@ -38,6 +39,7 @@ android {
                 "proguard-rules.pro"
             )
         }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -55,6 +57,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.core:core-i18n:1.0.0-alpha01")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -191,6 +194,11 @@ dependencies {
 
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0")
+
+    //coroutine with firebase
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
+
+    implementation ("com.github.shuhart:stepview:1.5.1")
 
 
 }
